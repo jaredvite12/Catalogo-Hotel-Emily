@@ -1095,3 +1095,232 @@ a {
 .caja-requisitos li { 
     margin-bottom: 5px; 
 }
+
+/* Botón Flotante Volver Arriba */
+.btn-volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #0d233a; /* Azul marino de tu paleta */
+  color: #dfa857;            /* Acento dorado/cobre */
+  border: 2px solid #dfa857;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  
+  /* Animación de aparición */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto visible al hacer scroll */
+.btn-volver-arriba.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efecto al presionar/tocar */
+.btn-volver-arriba:active {
+  transform: scale(0.9);
+}
+
+/* Botón flotante para subir */
+#btn-subir {
+    display: none; /* Oculto hasta que se hace scroll */
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Ubicado en la parte izquierda */
+    z-index: 99;
+    border: 2px solid #D4AF37; /* Borde dorado corporativo */
+    outline: none;
+    background-color: #0B1D3A; /* Azul marino Hotel Emily */
+    color: #D4AF37;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Botón circular */
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al tocar o pasar el dedo/mouse */
+#btn-subir:hover, #btn-subir:active {
+    background-color: #D4AF37;
+    color: #0B1D3A;
+    transform: scale(1.1);
+}
+
+/* =========================================
+   PUEBLOS MÁGICOS - DISEÑO HÍBRIDO LIMPIO
+   ========================================= */
+
+/* Acordeón Principal Destacado */
+.acordeon-destacado {
+    border: 2px solid var(--dorado);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+.acordeon-destacado .acordeon-cabecera {
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: var(--blanco);
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.acordeon-cabecera-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.titulo-acordeon {
+    display: block;
+    color: var(--azul-marino);
+    font-weight: bold;
+}
+.subtitulo-acordeon {
+    font-size: 0.85rem;
+    color: var(--texto-claro);
+    font-weight: normal;
+}
+.titulo-capa {
+    color: var(--azul-marino);
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Capa 1: Cuadrícula de Parques */
+.caja-servicio-pastel {
+    padding: 15px 10px;
+    border: 1px solid transparent; /* El color se inyecta desde el HTML */
+    border-radius: 8px;
+    text-align: center;
+}
+.icono-capa1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    display: block;
+}
+.caja-servicio-pastel .texto-principal {
+    font-size: 0.9rem;
+    color: #115518;
+    font-weight: bold;
+}
+.caja-servicio-pastel .texto-horario {
+    font-size: 0.75rem;
+    color: #E23637;
+    margin-top: 5px;
+}
+.caja-servicio-pastel .texto-ubicacion,
+.caja-servicio-pastel .texto-nota {
+    font-size: 0.75rem;
+    color: #3F256E;
+    margin-top: 3px;
+}
+.etiqueta-precio-centro {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #CD141A;
+    font-weight: 800;
+    background: rgba(255,255,255,0.6);
+    padding: 4px 0;
+    border-radius: 6px;
+}
+
+/* Capa 2: Agencias y Tours */
+.tarjeta-aventura {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: var(--fondo-gris);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tarjeta-aventura .texto-principal {
+    color: #0f172a;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+.tarjeta-aventura .texto-secundario {
+    color: #475569;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+.tarjeta-aventura-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tarjeta-aventura .texto-resalte {
+    color: #334155;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Capa 3: Banners de Restaurantes */
+.banner-restaurante {
+    border: none;
+    padding: 18px 15px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.banner-primario {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+}
+.banner-secundario {
+    background-color: var(--texto-oscuro);
+    color: var(--blanco);
+}
+.banner-titulo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+.banner-desc {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+}
+.banner-secundario .banner-desc {
+    color: #94a3b8;
+}
+.banner-tel {
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin-top: 4px;
+}
+.btn-reserva-dorado {
+    background: var(--dorado);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+.btn-reserva-dorado:active {
+    transform: scale(0.95);
+}
