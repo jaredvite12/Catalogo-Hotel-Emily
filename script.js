@@ -184,3 +184,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Funcionalidad del Botón Volver Arriba
+const btnVolverArriba = document.getElementById('btnVolverArriba');
+
+if (btnVolverArriba) {
+  // Mostrar u ocultar el botón según el scroll (se activa al bajar 300px)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btnVolverArriba.classList.add('visible');
+    } else {
+      btnVolverArriba.classList.remove('visible');
+    }
+  });
+
+  // Evento para regresar suavemente al inicio
+  btnVolverArriba.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Lógica para el botón flotante de subir
+const btnSubir = document.getElementById("btn-subir");
+
+if (btnSubir) {
+    // Mostrar u ocultar el botón según el scroll
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btnSubir.style.display = "block";
+        } else {
+            btnSubir.style.display = "none";
+        }
+    });
+
+    // Subir suavemente al hacer clic
+    btnSubir.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
