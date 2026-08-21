@@ -1324,3 +1324,52 @@ a {
 .btn-reserva-dorado:active {
     transform: scale(0.95);
 }
+
+/* =========================================
+   ESTILOS PERSONALIZADOS - GOOGLE TRANSLATE
+   ========================================= */
+
+/* 1. Ocultar la molesta barra superior que empuja la página */
+.goog-te-banner-frame.skiptranslate { 
+    display: none !important; 
+}
+body { 
+    top: 0px !important; 
+}
+
+/* 2. Ocultar el texto "Con la tecnología de Google" y el logo */
+.goog-te-gadget { 
+    color: transparent !important; 
+    font-size: 0px !important; 
+}
+.goog-logo-link { 
+    display: none !important; 
+}
+
+/* 3. Desactivar el fondo amarillo extraño que aparece al tocar el texto traducido */
+.goog-tooltip { 
+    display: none !important; 
+}
+.goog-tooltip:hover { 
+    display: none !important; 
+}
+.goog-text-highlight { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+}
+
+/* 4. Darle el estilo de tu hotel al botón selector */
+.goog-te-combo {
+    background-color: var(--blanco) !important;
+    color: var(--azul-marino) !important;
+    border: 2px solid var(--dorado) !important;
+    border-radius: 20px !important; /* Bordes redondeados modernos */
+    padding: 8px 15px !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
+    outline: none !important;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
