@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Hotel Emily</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor-app">
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <div class="cabecera-izq">
+        <div class="logos-cabecera">
+          <a href="index.html" class="titulo-cabecera">
+            <img src="img/logos/Logo-Emily.webp" alt="Emily">
+            <img src="img/logos/Logo-Ciros.webp" alt="Ciros">
+            <img src="img/logos/Logo-Chips.webp" alt="Chips">
+          </a>
+          <div class="selector-idioma" aria-label="Selector de idioma">
+            <button type="button" class="boton-idioma activo" data-idioma="es" aria-label="Cambiar a español" title="Español">🇲🇽</button>
+            <button type="button" class="boton-idioma" data-idioma="en" aria-label="Change to English" title="English">🇺🇸</button>
+            <div id="google_translate_element"></div>
+          </div>
+        </div>
+      </div>
+      <button class="boton-menu" id="btn-abrir-menu">☰</button>
+    </header>
+
+    <div class="fondo-oscuro" id="fondo-menu"></div>
+    
+    <!-- ----------------------------------------- Barra lateral ---------------------------------------------- -->
+    <nav class="menu-lateral" id="menu">
+      <div class="etiqueta-menu">Navegación</div>
+      <a href="index.html" class="enlace-menu"><span>📍</span> Inicio</a>
+      <a href="habitaciones.html" class="enlace-menu activo"><span>🛏️</span> Habitaciones</a>
+      <a href="restaurante.html" class="enlace-menu"><span>🍽️</span> Restaurante</a>
+      <a href="salones.html" class="enlace-menu"><span>🎤</span> Salones</a>
+      <a href="pueblos.html" class="enlace-menu"><span>🏘️</span> Pueblos Mágicos</a>
+      <a href="negocios.html" class="enlace-menu"><span>🗒️</span> Otros Servicios</a>
+      <a href="contacto.html" class="enlace-menu"><span>📞</span> Contacto</a>
+    </nav>
+
+
+
+    
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+      <section class="contenido-principal" id="contenido">
+                <h2 class="titulo-seccion"> Habitaciones Disponibles</h2>
+
+                <div class="acordeon">
+                    <button class="acordeon-cabecera">
+                        Hotel Emily <span class="acordeon-icono">▼</span>
+                    </button>
+                    <div class="acordeon-contenido">
+
+
+                    <!-- HABITACIÓN ESTÁNDAR -->
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/ESTANDAR_EMILY1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                              <img src="img/hab/ESTANDAR_EMILY2.webp" alt="Habitación 1 - Vista 2" loading="lazy">
+                            </div>
+                              <button class="carrusel-btn ant">&#10094;</button>
+                              <button class="carrusel-btn sig">&#10095;</button>
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                              <div class="tarjeta-habitacion-titulo">
+                                Estándar
+                                <span class="badge-pax">1 a 2 personas</span>
+                              </div>
+                              <div class="tarjeta-habitacion-detalles">
+                                 <p>Nuestra habitación estándar ofrece 1 cama matrimonial o King Size. </p>
+                                 <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                                <ul class="lista-amenidades">
+                                    <li><span>📺</span> Pantalla LCD 35"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                                </ul>
+                              </div>
+                         </div>
+                        </div>
+
+
+
+                    <!-- HABITACIÓN JR.SUITE -->
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/JR_SUITE_EMILY1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                              <img src="img/hab/JR_SUITE_EMILY2.webp" alt="Habitación 1 - Vista 2" loading="lazy">
+                            </div>
+                              <button class="carrusel-btn ant">&#10094;</button>
+                              <button class="carrusel-btn sig">&#10095;</button>
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                           <div class="tarjeta-habitacion-titulo">
+                               Jr. Suite
+                              <span class="badge-pax">1 a 4 personas</span>
+                          </div>
+                          <div class="tarjeta-habitacion-detalles">
+                              <p>Diseñada para grupos ofrece 2 camas matrimoniales.</p>
+                              <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                              <ul class="lista-amenidades">
+                                  <li><span>📺</span> Pantalla LCD 35"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                              </ul>
+                          </div>
+                          </div>
+                        </div>
+
+
+                    <!-- HABITACIÓN SUITE -->
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/SUITE_EMILY1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                              <img src="img/hab/SUITE_EMILY2.webp" alt="Habitación 1 - Vista 2" loading="lazy">
+                            </div>
+                              <button class="carrusel-btn ant">&#10094;</button>
+                              <button class="carrusel-btn sig">&#10095;</button>
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                              <div class="tarjeta-habitacion-titulo">
+                                Suite
+                                <span class="badge-pax">1 a 4 personas</span>
+                              </div>
+                              <div class="tarjeta-habitacion-detalles">
+                                 <p>Ideal para descansar con el máximo confort. Ofrece 1 cama King Size y 2 camas individuales. </p>
+                                 <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                                <ul class="lista-amenidades">
+                                    <li><span>📺</span> Pantalla LCD 55" y 35"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                                </ul>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- ------------------------------- HOTEL CIROS ---------------------------------------------- -->
+
+              <!-- HABITACIÓN ESTÁNDAR -->
+                <div class="acordeon">
+                    <button class="acordeon-cabecera">
+                        Hotel Ciros <span class="acordeon-icono">▼</span>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/ESTANDAR_CIROS1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                              <img src="img/hab/ESTANDAR_CIROS2.webp" alt="Habitación 1 - Vista 2" loading="lazy">
+                            </div>
+                              <button class="carrusel-btn ant">&#10094;</button>
+                              <button class="carrusel-btn sig">&#10095;</button>
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                              <div class="tarjeta-habitacion-titulo">
+                                Estándar
+                                <span class="badge-pax">1 a 2 personas</span>
+                              </div>
+                              <div class="tarjeta-habitacion-detalles">
+                                 <p>Nuestra habitación estándar ofrece 1 cama matrimonial o King Size. </p>
+                                 <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                                <ul class="lista-amenidades">
+                                    <li><span>📺</span> Pantalla LCD 42"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                                </ul>
+                              </div>
+                         </div>
+                        </div>
+
+                    <!-- HABITACIÓN JR.SUITE -->
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/JR_CIROS1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                <!--          <img src="img/hab/King-C.webp" alt="Habitación 1 - Vista 2" loading="lazy">          -->
+                            </div>
+                <!--          <button class="carrusel-btn ant">&#10094;</button>                 
+                              <button class="carrusel-btn sig">&#10095;</button>                -->
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                              <div class="tarjeta-habitacion-titulo">
+                                Jr. Suite
+                                <span class="badge-pax">1 a 4 personas</span>
+                              </div>
+                              <div class="tarjeta-habitacion-detalles">
+                                 <p>Habitación ideal para grupos, ofrece 2 camas matrimoniales. </p>
+                                 <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                                <ul class="lista-amenidades">
+                                    <li><span>📺</span> Pantalla LCD 42"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                                </ul>
+                              </div>
+                         </div>
+                        </div>
+                    <!-- HABITACIÓN JR.SUITE CON VISTA -->
+                        <div class="tarjeta-habitacion">
+                          <div class="carrusel-contenedor">
+                            <div class="carrusel-slide">
+                              <img src="img/hab/JR_VISTA_CIROS1.webp" alt="Habitación 1 - Vista 1" loading="lazy">
+                <!--          <img src="img/hab/King-C.webp" alt="Habitación 1 - Vista 2" loading="lazy">          -->
+                            </div>
+                <!--          <button class="carrusel-btn ant">&#10094;</button>                 
+                              <button class="carrusel-btn sig">&#10095;</button>                -->
+                          </div>
+                          <div class="tarjeta-habitacion-info">
+                              <div class="tarjeta-habitacion-titulo">
+                                Jr. Suite con vista
+                                <span class="badge-pax">1 a 4 personas</span>
+                              </div>
+                              <div class="tarjeta-habitacion-detalles">
+                                 <p>Habitación con vista al reloj, Ofrece 2 camas matrimoniales. </p>
+                                 <p style="margin-top: 10px;"><strong>Amenidades:</strong></p>
+                                <ul class="lista-amenidades">
+                                    <li><span>📺</span> Pantalla LCD 42"</li>
+                                    <li><span>📶</span> WiFi Alta Velocidad</li>
+                                    <li><span>❄️</span> Ventilador</li>
+                                    <li><span>♨️</span> Calentador </li>
+                                    <li><span>🔐</span> Caja Seguridad</li>
+                                    <li><span>🧺</span> Kit de planchado </li>
+                                </ul>
+                              </div>
+                         </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+    </main>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="pie-contacto">
+      <p>Recepción: *0</p>
+      <p>Restaurante: *100</p>
+    </div>
+    <p class="pie-direccion">
+      📍Plaza Independencia S/N Centro Histórico<br>
+      Pachuca de Soto, Hidalgo, C.P. 42000
+    </p>
+    <div class="pie-contacto">
+      <p>Hotel Emily: 771 715 08 28</p>
+    </div>
+    <div class="pie-contacto">
+      <p>Hotel Ciros: 771 747 47 62</p>
+    </div>
+    <div class="pie-redes">
+      <a href="https://www.facebook.com/hotelemily" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/facebookB.webp" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/hotelemilymx?igsh=eTNqY2UwODdlMnMz" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/instagram.webp" alt="Instagram">
+      </a>
+    </div>
+    <div class="pie-legal">
+      &copy; 2026 Hotel Emily Pachuca. Todos los derechos reservados.
+    </div>
+  </footer>
+  <button id="btn-subir" title="Volver arriba">↑</button>
+  <script src="script.js"></script>
+  <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
