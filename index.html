@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Hotel Emily</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor-app">
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <div class="cabecera-izq">
+        <div class="logos-cabecera">
+          <a href="index.html" class="titulo-cabecera">
+            <img src="img/logos/Logo-Emily.webp" alt="Emily">
+            <img src="img/logos/Logo-Ciros.webp" alt="Ciros">
+            <img src="img/logos/Logo-Chips.webp" alt="Chips">
+          </a>
+          <div class="selector-idioma" aria-label="Selector de idioma">
+            <button type="button" class="boton-idioma activo" data-idioma="es" aria-label="Cambiar a español" title="Español">Es</button>
+            <button type="button" class="boton-idioma" data-idioma="en" aria-label="Change to English" title="English">Eng</button>
+            <div id="google_translate_element"></div>
+          </div>
+        </div>
+      </div>
+      <button class="boton-menu" id="btn-abrir-menu">☰</button>
+    </header>
+
+    <div class="fondo-oscuro" id="fondo-menu"></div>
+    
+    <!-- ----------------------------------------- Barra lateral ---------------------------------------------- -->
+    <nav class="menu-lateral" id="menu">
+      <div class="etiqueta-menu">Navegación</div>
+      <a href="index.html" class="enlace-menu activo"><span>📍</span> Inicio</a>
+      <a href="habitaciones.html" class="enlace-menu"><span>🛏️</span> Habitaciones</a>
+      <a href="restaurante.html" class="enlace-menu"><span>🍽️</span> Restaurante</a>
+      <a href="salones.html" class="enlace-menu"><span>🎤</span> Salones</a>
+      <a href="pueblos.html" class="enlace-menu"><span>🏘️</span> Pueblos Mágicos</a>
+      <a href="negocios.html" class="enlace-menu"><span>🗒️</span> Otros Servicios</a>
+      <a href="contacto.html" class="enlace-menu"><span>📞</span> Contacto</a>
+    </nav>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+      <section class="vista activa" id="vista-inicio">
+
+          <!-- -------------------------------------------------------- Imágenes carrusel inicio ------------------------------------- -->
+                <div class="carrusel-inicio" id="carrusel-auto">
+                    <img src="img/inicio/FACHADA_EMILY.webp" alt="Fachada del Hotel" class="carrusel-inicio-img" loading="lazy">
+                    <img src="img/inicio/INICIO_CHIPS.webp" alt="Vista Emily" class="carrusel-inicio-img" loading="lazy">
+                    <img src="img/inicio/FACHADA_CIROS.webp" alt="Vista Ciros" class="carrusel-inicio-img" loading="lazy">
+                </div>
+
+
+            <!-- ------------------------------------------------ Texto inicio ------------------------------------------------ -->
+                <div class="tarjeta" style="margin-bottom: 10px;">
+                    <h2 style="color: var(--azul-marino); margin-bottom: 10px;">📍Frente al Reloj Monumental</h2>
+                    <p style="color: var(--texto-claro); font-size: 0.9rem; line-height: 1.5;">
+                        Experimenta la calidez de sentirte como en casa en Hotel Emily y Hotel Ciros.
+                    </p>
+                </div> 
+            
+                    <h3 style="color: var(--azul-marino); margin-top: 15px; font-size: 1.1rem;">Nuestros servicios</h3>
+                <div class="accesos-rapidos">
+                    <a href="habitaciones.html" class="caja-acceso boton-navegar">
+                        <span>🛏️</span><p>Habitaciones</p>
+                    </a>
+                    <a href="restaurante.html" class="caja-acceso boton-navegar">
+                        <span>🍽️</span><p>Restaurante</p>
+                    </a>
+                    <a href="salones.html" class="caja-acceso boton-navegar">
+                        <span>🎤</span><p>Salones y Paquetes</p>
+                    </a>
+                    <a href="pueblos.html" class="caja-acceso boton-navegar">
+                        <span>🏘️</span><p>Pueblos Mágicos</p>
+                    </a>
+                    <a href="negocios.html" class="caja-acceso boton-navegar">
+                        <span>🗒️</span><p>Otros servicios</p>
+                    </a>
+                    <a href="contacto.html" class="caja-acceso boton-navegar">
+                        <span>📞</span><p>Contacto</p>
+                    </a>
+                </div>
+
+                <br /><h3 style="color: var(--azul-marino); margin-bottom: 12px; font-size: 1rem;">Adicionales</h3>
+                
+                <div class="contenedor-carrusel-servicios">
+                    <button class="btn-carrusel btn-izq" id="btn-izq-servicios"> ❮ </button>
+                    
+                    <div class="servicios-carrusel" id="carrusel-servicios">
+                        <div class="servicio-pildora"><span>🚗</span> Estacionamiento</div>
+                        <div class="servicio-pildora"><span>🛎️</span> Room Service</div>
+                        <div class="servicio-pildora"><span>🧺</span> Lavandería</div>
+                        <div class="servicio-pildora"><span>👔</span> Servicio de planchado</div>
+                        <div class="servicio-pildora"><span>🏋️</span> Gimnasio</div>
+                        <div class="servicio-pildora"><span>🔒</span> Caja fuerte</div>
+                        <div class="servicio-pildora"><span>📶</span> Wi-Fi</div>
+                        <div class="servicio-pildora"><span>💆</span> Cabina de masajes</div>
+                    </div>
+
+                    <button class="btn-carrusel btn-der" id="btn-der-servicios"> ❯ </button>
+                </div>
+
+                <h3 style="color: var(--azul-marino); margin: 25px 0 15px 0; font-size: 1rem;">Salud y relajación</h3>
+
+                <div class="bienestar-collage">
+                    <img src="img/inicio/GIMNASIO.webp" alt="Gimnasio" loading="lazy">
+                    <div class="bienestar-flotante derecha">
+                        <h4>Gimnasio</h4>
+                        <p>No pauses tu entrenamiento, espacio de pesas y cardio.</p>
+                    </div>
+                </div>
+
+                <div class="bienestar-collage inverso">
+                    <img src="img/inicio/SPA.webp" alt="Spa" loading="lazy">
+                    <div class="bienestar-flotante izquierda">
+                        <h4>Spa y masajes</h4>
+                        <p>Relajación total al alcance de tu habitación, previa cita.</p>
+                    </div>
+                </div>
+                
+                
+            </section>
+    </main>
+  </div>
+  
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="pie-contacto">
+      <p>Recepción: *0</p>
+      <p>Restaurante: *100</p>
+    </div>
+    <p class="pie-direccion">
+      📍Plaza Independencia S/N Centro Histórico<br>
+      Pachuca de Soto, Hidalgo, C.P. 42000
+    </p>
+    <div class="pie-contacto">
+      <p>Hotel Emily: 771 715 08 28</p>
+    </div>
+    <div class="pie-contacto">
+      <p>Hotel Ciros: 771 747 47 62</p>
+    </div>
+    <div class="pie-redes">
+      <a href="https://www.facebook.com/hotelemily" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/facebookB.webp" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/hotelemilymx?igsh=eTNqY2UwODdlMnMz" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/instagram.webp" alt="Instagram">
+      </a>
+    </div>
+    <div class="pie-legal">
+      &copy; 2026 Hotel Emily Pachuca. Todos los derechos reservados.
+    </div>
+  </footer>
+  <button id="btn-subir" title="Volver arriba">↑</button>
+  <script src="script.js"></script>
+  <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+</body>
+</html>
