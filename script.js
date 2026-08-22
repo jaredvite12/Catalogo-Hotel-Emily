@@ -9,7 +9,7 @@ if (idiomaDesdeUrl === 'es' || idiomaDesdeUrl === 'en') {
   localStorage.setItem('idiomaSeleccionado', idiomaDesdeUrl);
 }
 
-// Inicializa el selector de idioma de Google Translate.
+// Inicializa el selector de idioma de Google Translate. ------------------------------------------
 window.googleTranslateElementInit = function() {
   new google.translate.TranslateElement({
     pageLanguage: 'es',
@@ -25,6 +25,7 @@ window.googleTranslateElementInit = function() {
   }
 };
 
+// Cambiar Idioma ---------------------------------------------------------------------
 function cambiarIdioma(idioma) {
   const selectorGoogle = document.querySelector('.goog-te-combo');
 
@@ -33,11 +34,27 @@ function cambiarIdioma(idioma) {
     return;
   }
 
+  // Guardamos tu preferencia localmente
   localStorage.setItem('idiomaSeleccionado', idioma);
-  document.cookie = `googtrans=/es/${idioma}; path=/`;
-  selectorGoogle.value = idioma;
-  selectorGoogle.dispatchEvent(new Event('change'));
 
+  if (idioma === 'es') {
+    // 1. Borramos cualquier rastro de la cookie de Google Translate
+    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=' + window.location.hostname + '; path=/;';
+    
+    // 2. Si el selector de Google tiene un valor (es decir, si estábamos en inglés), 
+    // recargamos la página para limpiar las alteraciones que Google le hizo al DOM.
+    if (selectorGoogle.value !== '') {
+      window.location.reload();
+    }
+  } else {
+    // Si vamos a Inglés (o cualquier otro idioma ajeno al base)
+    document.cookie = `googtrans=/es/${idioma}; path=/`;
+    selectorGoogle.value = idioma;
+    selectorGoogle.dispatchEvent(new Event('change'));
+  }
+
+  // Actualizamos la clase activa en los botones
   document.querySelectorAll('.boton-idioma').forEach(boton => {
     boton.classList.toggle('activo', boton.dataset.idioma === idioma);
   });
