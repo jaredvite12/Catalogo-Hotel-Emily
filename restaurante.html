@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="Disfruta el sabor en el Restaurante Chip's. Menú variado de comida mexicana, desayunos y opciones especiales para pacientes en recuperación. ¡Visítanos en el Centro!">
+  <title>Catálogo Hotel Emily</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor-app">
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <div class="cabecera-izq">
+        <div class="logos-cabecera">
+          <a href="index.html" class="titulo-cabecera">
+            <img src="img/logos/Logo-Emily.webp" alt="Emily">
+            <img src="img/logos/Logo-Ciros.webp" alt="Ciros">
+            <img src="img/logos/Logo-Chips.webp" alt="Chips">
+          </a>
+          <div class="selector-idioma" aria-label="Selector de idioma">
+            <button type="button" class="boton-idioma activo notranslate" translate="no" data-idioma="es" aria-label="Cambiar a español" title="Español">Es</button>
+            <button type="button" class="boton-idioma notranslate" translate="no" data-idioma="en" aria-label="Change to English" title="English">Ing</button>
+            <div id="google_translate_element"></div>
+          </div>
+        </div>
+      </div>
+      <button class="boton-menu" id="btn-abrir-menu">☰</button>
+    </header>
+
+    <div class="fondo-oscuro" id="fondo-menu"></div>
+    
+    <!-- ----------------------------------------- Barra lateral ---------------------------------------------- -->
+    <nav class="menu-lateral" id="menu">
+      <div class="etiqueta-menu">Navegación</div>
+      <a href="index.html" class="enlace-menu"><span>📍</span> Inicio</a>
+      <a href="habitaciones.html" class="enlace-menu"><span>🛏️</span> Habitaciones</a>
+      <a href="restaurante.html" class="enlace-menu activo"><span>🍽️</span> Restaurante</a>
+      <a href="salones.html" class="enlace-menu"><span>🎤</span> Salones</a>
+      <a href="pueblos.html" class="enlace-menu"><span>🏘️</span> Pueblos Mágicos</a>
+      <a href="otros-servicios.html" class="enlace-menu"><span>🗒️</span> Otros Servicios</a>
+      <a href="contacto.html" class="enlace-menu"><span>📞</span> Contacto</a>
+    </nav>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+            <section class="contenido-principal" id="contenido">
+                <img src="img/hab/CHIPS.webp" alt="Fachada del Hotel" class="imagen-principal" loading="lazy">
+                <h2 class="titulo-seccion">Menú del restaurante Chip's</h2>
+                
+                <p style="color: var(--texto-claro); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
+                    El restaurante Chip's se encuentra ubicado dentro de las instalaciones del Hotel Emily. <br />
+                    Consulta nuestra variedad de platillos, desde desayunos y antojitos hasta opciones diseñadas especialmente para tu recuperación.
+                </p>
+
+                <a href="docs/Menu_chips.pdf" target="_blank" class="boton-pdf">
+                    <span>📖</span> Menú Chip's
+                </a>
+
+                <a href="docs/Menu_pacientes.pdf" target="_blank" class="boton-pdf" style="background-color: #0f766e; box-shadow: 0 4px 6px rgba(15, 118, 110, 0.2);">
+                    <span>🩺</span> Pacientes en recuperación
+                </a>
+            </section>
+    </main>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="pie-contacto">
+      <p>Recepción: *0</p>
+      <p>Restaurante: *100</p>
+    </div>
+    <p class="pie-direccion">
+      📍Plaza Independencia S/N Centro Histórico<br>
+      Pachuca de Soto, Hidalgo, C.P. 42000
+    </p>
+    <div class="pie-contacto">
+      <p>Hotel Emily: 771 715 08 28</p>
+    </div>
+    <div class="pie-contacto">
+      <p>Hotel Ciros: 771 747 47 62</p>
+    </div>
+    <div class="pie-redes">
+      <a href="https://www.facebook.com/hotelemily" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/facebookB.webp" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/hotelemilymx?igsh=eTNqY2UwODdlMnMz" target="_blank" rel="noopener noreferrer">
+        <img src="img/logos/instagram.webp" alt="Instagram">
+      </a>
+    </div>
+    <div class="pie-legal">
+      &copy; 2026 Hotel Emily Pachuca. Todos los derechos reservados.
+    </div>
+  </footer>
+  <button id="btn-subir" title="Volver arriba">↑</button>
+  <script src="script.js"></script>
+  <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
